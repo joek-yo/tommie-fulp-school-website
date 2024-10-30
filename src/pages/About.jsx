@@ -1,11 +1,12 @@
 // About.jsx
 import React from 'react';
+import '../styles/App.css';
 
 const About = () => {
     return (
-        <div>
+        <div className="container">
             <h1>About Us</h1>
-            <p>Learn more about Tommie Fulp Adventist Academy & Junior School and our mission.</p>
+            <p>Learn more about our mission, vision, and values.</p>
         </div>
     );
 };
