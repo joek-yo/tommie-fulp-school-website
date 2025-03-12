@@ -1,18 +1,23 @@
+// src/App.jsx
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Admissions from "./pages/Admissions";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <Router>
       <Navbar />
-      <main className="container mx-auto p-4 text-center">
-        <h1 className="text-4xl font-bold text-blue-600 mt-8">
-          Welcome to Tommie Fulp Academy
-        </h1>
-        <p className="text-lg text-gray-700 mt-4">
-          Empowering students with knowledge and values for a brighter future.
-        </p>
-      </main>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/admissions" element={<Admissions />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 
