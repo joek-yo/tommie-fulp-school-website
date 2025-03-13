@@ -42,21 +42,21 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Principal */}
             <div className="p-6 bg-white shadow-lg rounded-lg text-center">
-              <img src="/src/Images/Principal.jpg" alt="Principal" className="w-32 h-32 mx-auto rounded-full mb-4" />
+              <img src="/Images/Principal.jpg" alt="Principal" className="w-32 h-32 mx-auto rounded-full mb-4" />
               <h3 className="text-2xl font-semibold">John Doe</h3>
               <p className="text-sm text-gray-600">School Principal</p>
             </div>
 
             {/* Teacher 1 */}
             <div className="p-6 bg-white shadow-lg rounded-lg text-center">
-              <img src="/src/Images/Jane Smith.jpg" alt="Teacher" className="w-32 h-32 mx-auto rounded-full mb-4" />
+              <img src="/Images/Jane Smith.jpg" alt="Teacher" className="w-32 h-32 mx-auto rounded-full mb-4" />
               <h3 className="text-2xl font-semibold">Jane Smith</h3>
               <p className="text-sm text-gray-600">Mathematics Teacher</p>
             </div>
 
             {/* Teacher 2 */}
             <div className="p-6 bg-white shadow-lg rounded-lg text-center">
-              <img src="/src/Images/Mark Johnson.jpg" alt="Teacher" className="w-32 h-32 mx-auto rounded-full mb-4" />
+              <img src="/Images/Mark Johnson.jpg" alt="Teacher" className="w-32 h-32 mx-auto rounded-full mb-4" />
               <h3 className="text-2xl font-semibold">Mark Johnson</h3>
               <p className="text-sm text-gray-600">Science Teacher</p>
             </div>
