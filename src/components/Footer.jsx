@@ -1,5 +1,8 @@
 // src/components/Footer.jsx
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
+
 const Footer = () => {
   return (
     <footer className="bg-[#000080] text-white py-10 mt-10">
@@ -29,14 +32,14 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold text-[#FFD700]">Follow Us</h3>
           <div className="flex space-x-4 mt-2">
-            <a href="#" className="hover:text-gray-400">
-              <i className="fab fa-facebook fa-2x"></i>
+            <a href="#" className="hover:text-gray-400 text-white">
+              <FontAwesomeIcon icon={faFacebook} size="2x" />
             </a>
-            <a href="#" className="hover:text-gray-400">
-              <i className="fab fa-twitter fa-2x"></i>
+            <a href="#" className="hover:text-gray-400 text-white">
+              <FontAwesomeIcon icon={faTwitter} size="2x" />
             </a>
-            <a href="#" className="hover:text-gray-400">
-              <i className="fab fa-instagram fa-2x"></i>
+            <a href="#" className="hover:text-gray-400 text-white">
+              <FontAwesomeIcon icon={faInstagram} size="2x" />
             </a>
           </div>
         </div>
@@ -51,3 +54,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
