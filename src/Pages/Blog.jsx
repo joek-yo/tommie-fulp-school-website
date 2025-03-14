@@ -39,14 +39,14 @@ const Blog = () => {
   const currentPosts = blogPosts.slice(indexOfFirstPost, indexOfLastPost);
 
   return (
-    <div className="container mx-auto px-6 py-10">
+    <div className="pt-[95px] container mx-auto px-6 py-10">
       <h1 className="text-3xl font-bold text-center text-[#000080]">School News & Updates</h1>
       <p className="text-center text-gray-600 mt-2">Stay informed with our latest updates.</p>
 
       {/* Blog Posts */}
       <div className="mt-6 grid md:grid-cols-2 gap-8">
         {currentPosts.map((post) => (
-          <div key={post.id} className="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div key={post.id} className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300">
             <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
             <div className="p-4">
               <h2 className="text-xl font-bold text-[#000080]">{post.title}</h2>

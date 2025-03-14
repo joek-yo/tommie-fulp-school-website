@@ -11,6 +11,13 @@ import "swiper/css/effect-fade";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
 
+// Animation Variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
+};
+
+
 const images = [
   "/Images/Hero 1.jpg",
   "/Images/Hero 2.jpg",
@@ -21,11 +28,12 @@ const images = [
   "/Images/Hero 7.jpg",
 ];
 
+// Hero section image array
 const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative w-full h-screen">
+      <div className="pt-[70px] relative w-full h-screen">
         <Swiper
           modules={[Autoplay, Navigation, Pagination, EffectFade]}
           effect="fade"

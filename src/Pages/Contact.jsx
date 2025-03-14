@@ -23,7 +23,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto px-6 py-10">
+    <div className="pt-[95px] container mx-auto px-6 py-10">
       <h1 className="text-3xl font-bold text-center text-[#000080]">Contact Us</h1>
       <p className="text-center text-gray-600 mt-2">We would love to hear from you!</p>
 

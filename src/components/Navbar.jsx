@@ -1,3 +1,5 @@
+// src/components/Navbar.jsx
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -22,7 +24,7 @@ const Navbar = () => {
   }, [prevScrollPos]);
 
   return (
-    <nav className={`bg-[#000080] p-4 text-white shadow-lg fixed top-0 left-0 w-full transition-transform duration-300 ${
+    <nav className={`bg-[#000080] p-4 text-white shadow-lg fixed top-0 left-0 w-full transition-transform duration-300 z-50 ${
       visible ? "translate-y-0" : "-translate-y-full"
     }`}>
       <div className="container mx-auto flex justify-between items-center">
@@ -63,11 +65,11 @@ const Navbar = () => {
 
         {/* Mobile Links */}
         <ul className="flex flex-col space-y-2 p-4">
-          <li><Link to="/" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white">Home</Link></li>
-          <li><Link to="/about" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white">About</Link></li>
-          <li><Link to="/admissions" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white">Admissions</Link></li>
-          <li><Link to="/contact" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white">Contact</Link></li>
-          <li><Link to="/blog" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white">Blog</Link></li>
+          <li><Link to="/" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white rounded-lg">Home</Link></li>
+          <li><Link to="/about" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white rounded-lg">About</Link></li>
+          <li><Link to="/admissions" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white rounded-lg">Admissions</Link></li>
+          <li><Link to="/contact" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white rounded-lg">Contact</Link></li>
+          <li><Link to="/blog" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white rounded-lg">Blog</Link></li>
         </ul>
       </div>
     </nav>

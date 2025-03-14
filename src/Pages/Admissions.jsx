@@ -26,7 +26,7 @@ const Admissions = () => {
   };
 
   return (
-    <div className="py-16 px-6 bg-gray-100 text-[#000080]">
+    <div className="pt-[95px] py-16 px-6 bg-gray-100 text-[#000080]">
       <div className="container mx-auto">
         <h1 className="text-5xl font-bold text-center mb-8">Admissions</h1>
         
@@ -127,7 +127,7 @@ const Admissions = () => {
         </div>
 
         {/* Admission Requirements */}
-        <div className="mt-16 bg-white shadow-lg rounded-lg p-6">
+        <div className="mt-16 bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl hover:scale-105 transition-transform duration-300">
           <h2 className="text-3xl font-bold mb-4">Admission Requirements</h2>
           <ul className="list-disc list-inside text-lg">
             <li>Copy of birth certificate</li>
