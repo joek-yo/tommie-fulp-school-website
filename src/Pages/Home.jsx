@@ -18,6 +18,7 @@ const images = [
   "/Images/Hero 4.jpg",
   "/Images/Hero 5.jpg",
   "/Images/Hero 6.jpg",
+  "/Images/Hero 7.jpg",
 ];
 
 const Home = () => {

@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Admissions from "./pages/Admissions";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
-import Blog from "./Pages/Blog";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
