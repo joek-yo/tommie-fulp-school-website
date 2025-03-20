@@ -47,7 +47,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="text-center mt-8 text-gray-300">
+      <div className="text-center mt-8 text-gray-300 border-t border-gray-400 pt-4">
         &copy; {new Date().getFullYear()} Tommie Fulp Adventist Academy. All Rights Reserved.
       </div>
     </footer>

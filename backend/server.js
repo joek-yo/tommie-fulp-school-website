@@ -4,7 +4,8 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
-const authRoutes = require("./routes/authRoutes")
+const authRoutes = require("./routes/authRoutes");
+const protectedRoutes = require("./routes/protectedRoutes");
 
 require("dotenv").config();
 
@@ -19,6 +20,7 @@ app.use(bodyParser.json());
 connectDB();
 
 // Default Route
+app.use("/api/protected", protectedRoutes);
 app.use("/api/auth", authRoutes);
 app.get("/", (req, res) => {
   res.send("🚀 Backend is Running!");

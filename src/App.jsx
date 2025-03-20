@@ -8,6 +8,9 @@ import Admissions from "./pages/Admissions";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Blog from "./pages/Blog";
+import SignIn from "./Pages/Auth/SignIn";
+import SignUp from "./Pages/Auth/SignUp";
+
 
 function App() {
   return (
@@ -19,6 +22,8 @@ function App() {
         <Route path="/admissions" element={<Admissions />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
       <Footer />
     </Router>

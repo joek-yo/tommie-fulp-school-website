@@ -29,11 +29,30 @@ const About = () => {
 
         {/* School History */}
         <div className="mt-16 bg-white shadow-lg rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-          <h2 className="text-3xl font-bold mb-4">Our History</h2>
+          <h2 className="text-3xl font-bold mb-4">Our Legacy & Growth</h2>
           <p className="text-lg">
-            Founded in [YEAR], Tommie Fulp Academy has grown to become a respected institution, known for 
-            its commitment to academic excellence and Christian values.
+            Since its founding in [YEAR], Tommie Fulp Academy has shaped young minds through a dedication to academic rigor and Christian values. 
+            We continue to uphold our commitment to excellence, ensuring our students thrive in a dynamic world.
           </p>
+        </div>
+
+        {/* Our Values & Excellence */}
+        <div className="mt-16 grid md:grid-cols-2 gap-8 text-left">
+          <div className="p-6 bg-white shadow-lg rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <h2 className="text-3xl font-bold mb-3">What Drives Us</h2>
+            <p>
+              Integrity, discipline, and service form the foundation of our academy. We instill these values in every learner, 
+              ensuring they grow into compassionate and responsible leaders of tomorrow.
+            </p>
+          </div>
+
+          <div className="p-6 bg-white shadow-lg rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <h2 className="text-3xl font-bold mb-3">Beyond the Classroom</h2>
+            <p>
+              Education at Tommie Fulp Academy goes beyond books—our students participate in engaging co-curricular activities 
+              including music, sports, drama, and innovation clubs, fostering well-rounded personal development.
+            </p>
+          </div>
         </div>
 
         {/* Meet Our Team */}

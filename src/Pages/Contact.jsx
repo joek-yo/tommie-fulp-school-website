@@ -1,6 +1,8 @@
 // src/pages/Contact.jsx
 
 import { useState } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 const Contact = () => {
   // Form State
@@ -80,18 +82,25 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Google Map */}
+      {/* Leaflet Map */}
       <div className="mt-8">
         <h2 className="text-2xl font-semibold text-center text-[#000080]">Our Location</h2>
-        <iframe
-          className="w-full h-64 mt-4 rounded-lg"
-          src="https://www.google.com/maps/embed/v1/place?q=Nairobi,Kenya&key=YOUR_GOOGLE_MAPS_API_KEY"
-          allowFullScreen
-        ></iframe>
+        <div className="w-full h-64 mt-4 rounded-lg overflow-hidden">
+          <MapContainer center={[-1.25524, 36.72553]} zoom={13} style={{ height: "100%", width: "100%" }}>
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            />
+            <Marker position={[-1.25532, 36.72559]}>
+              <Popup>
+                Tommie Fulp Adventist Academy, Nairobi, Kenya
+              </Popup>
+            </Marker>
+          </MapContainer>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Contact;
-

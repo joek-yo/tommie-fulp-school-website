@@ -1,9 +1,7 @@
-// src/pages/Blog.jsx
-
 import { useState } from "react";
 
 const Blog = () => {
-  // Sample blog posts
+  // Extended list of blog posts
   const blogPosts = [
     {
       id: 1,
@@ -22,15 +20,50 @@ const Blog = () => {
     {
       id: 3,
       title: "Sports Day 2025 – A Day to Remember",
-      image: "/public/Images/Sports.jpg",
+      image: "/Images/Sports.jpg",
       summary: "Relive the thrilling moments of our recent Sports Day event!",
       date: "February 28, 2025",
+    },
+    {
+      id: 4,
+      title: "Tech Innovations in Our Classrooms!",
+      image: "/Images/Class room.jpg",
+      summary: "Our school is integrating AI-powered learning tools and interactive smart boards to enhance student engagement and academic performance.",
+      date: "March 1, 2025",
+    },
+    {
+      id: 5,
+      title: "Annual Cultural Day – A Celebration of Diversity",
+      image: "/Images/culture.jpg",
+      summary: "Students showcased their rich cultural heritage with performances, traditional attire, and delicious cuisine from different backgrounds.",
+      date: "February 20, 2025",
+    },
+    {
+      id: 6,
+      title: "Meet the Student Council Leaders of 2025!",
+      image: "/Images/Student council.jpg",
+      summary: "Get to know our newly elected student council representatives and their plans for the school this year.",
+      date: "February 15, 2025",
+    },
+    {
+      id: 7,
+      title: "Our Robotics Team Shines in the National Championship",
+      image: "/Images/Robotic.jpg",
+      summary: "The school robotics team secured second place in the National Robotics Championship! Congratulations to our young innovators.",
+      date: "January 30, 2025",
+    },
+    {
+      id: 8,
+      title: "School Library Gets a Modern Upgrade!",
+      image: "/Images/Library.jpg",
+      summary: "Our library now features a digital book collection, VR learning spaces, and an online catalog for easier access to resources.",
+      date: "January 25, 2025",
     },
   ];
 
   // Pagination State
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 2;
+  const postsPerPage = 3;
   const totalPages = Math.ceil(blogPosts.length / postsPerPage);
 
   // Get current posts
@@ -44,7 +77,7 @@ const Blog = () => {
       <p className="text-center text-gray-600 mt-2">Stay informed with our latest updates.</p>
 
       {/* Blog Posts */}
-      <div className="mt-6 grid md:grid-cols-2 gap-8">
+      <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {currentPosts.map((post) => (
           <div key={post.id} className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300">
             <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
