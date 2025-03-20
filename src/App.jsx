@@ -10,6 +10,9 @@ import Footer from "./components/Footer";
 import Blog from "./pages/Blog";
 import SignIn from "./Pages/Auth/SignIn";
 import SignUp from "./Pages/Auth/SignUp";
+import AdminDashboard from "./pages/AdminDashboard";
+import TeacherDashboard from "./pages/TeacherDashboard";
+import StudentDashboard from "./pages/StudentDashboard";
 
 
 function App() {
@@ -24,6 +27,9 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/teacher/dashboard" element={<TeacherDashboard />} />
+        <Route path="/student/dashboard" element={<StudentDashboard />} />
       </Routes>
       <Footer />
     </Router>

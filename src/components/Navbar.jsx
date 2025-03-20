@@ -1,5 +1,4 @@
 // src/components/Navbar.jsx
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -11,12 +10,19 @@ const Navbar = () => {
   // Function to close menu when a link is clicked
   const closeMenu = () => setIsOpen(false);
 
-  // Handle navbar hide/show on scroll
+  // Throttle function to optimize scroll performance
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollPos = window.scrollY;
+          setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+          setPrevScrollPos(currentScrollPos);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -28,7 +34,6 @@ const Navbar = () => {
       visible ? "translate-y-0" : "-translate-y-full"
     }`}>
       <div className="container mx-auto flex justify-between items-center">
-        
         {/* Logo + Academy Name */}
         <div className="flex items-center space-x-3">
           <img src="/Images/Logo_TFA.png" alt="TFA Academy" className="w-10 h-10 rounded-lg" loading="lazy" />
@@ -42,12 +47,15 @@ const Navbar = () => {
           <li><Link to="/admissions" className="hover:text-[#87CEEB]">Admissions</Link></li>
           <li><Link to="/contact" className="hover:text-[#87CEEB]">Contact</Link></li>
           <li><Link to="/blog" className="hover:text-[#87CEEB]">Blog</Link></li>
+          <li><Link to="/signup" className="hover:text-[#87CEEB]">SignUp</Link></li>
+          <li><Link to="/signin" className="hover:text-[#87CEEB]">SignIn</Link></li>
         </ul>
 
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white focus:outline-none text-2xl"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation menu"
         >
           ☰
         </button>
@@ -57,19 +65,14 @@ const Navbar = () => {
       <div className={`absolute top-[90px] left-0 w-full bg-[#000080] z-50 transition-all duration-300 ease-in-out transform ${
         isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-3 pointer-events-none"
       } md:hidden`}>
-        
-        {/* Mobile Menu Logo */}
-        <div className="flex justify-center p-2">
-          <img src="/Images/Logo_TFA.png" alt="TFA Academy" className="w-16 h-auto rounded-lg" loading="lazy" />
-        </div>
-
-        {/* Mobile Links */}
         <ul className="flex flex-col space-y-2 p-4">
           <li><Link to="/" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white rounded-lg">Home</Link></li>
           <li><Link to="/about" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white rounded-lg">About</Link></li>
           <li><Link to="/admissions" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white rounded-lg">Admissions</Link></li>
           <li><Link to="/contact" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white rounded-lg">Contact</Link></li>
           <li><Link to="/blog" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white rounded-lg">Blog</Link></li>
+          <li><Link to="/signup" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white rounded-lg">SIgnUp</Link></li>
+          <li><Link to="/signin" onClick={closeMenu} className="block p-2 hover:bg-[#87CEEB] hover:text-white rounded-lg">SignIn</Link></li>
         </ul>
       </div>
     </nav>
